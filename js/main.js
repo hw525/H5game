@@ -29,6 +29,9 @@ function init() {
   bgPic.src = './src/background.jpg'
   canWidth = can1.width;
   canHeight = can1.height;
+
+  ane = new AneObj();
+  ane.init();
 }
 
 function gameloop() {
@@ -39,4 +42,7 @@ function gameloop() {
   lastTime = now;
   //  console.log(deltaTime);
   drawBackground();
+
+  ane.draw();
+
 }
