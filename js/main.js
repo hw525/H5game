@@ -32,6 +32,9 @@ function init() {
 
   ane = new AneObj();
   ane.init();
+
+  fruit = new FruitObj();
+  fruit.init();
 }
 
 function gameloop() {
@@ -44,5 +47,6 @@ function gameloop() {
   drawBackground();
 
   ane.draw();
-
+  fruitMonitor(); //每一帧都要判断有多少个活着的果实
+  fruit.draw();
 }
